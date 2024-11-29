@@ -1,0 +1,318 @@
+<html dir="rtl" lang="ar">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   تسجيل الدخول
+  </title>
+  <style>
+   body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            padding: 20px;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .logo span {
+            color: yellow;
+        }
+        .title {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+        .description {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        .link {
+            color: #1a73e8;
+            text-decoration: none;
+            margin-bottom: 20px;
+            display: block;
+        }
+        .input-container {
+            margin-bottom: 20px;
+        }
+        .input-container input {
+            width: 80%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .forgot-link {
+            color: #1a73e8;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 20px;
+        }
+        .create-account {
+            color: #1a73e8;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 20px;
+        }
+        .next-button {
+            background-color: #1a73e8;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .product {
+            background-color: #333;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        .product h3 {
+            margin: 0;
+            margin-bottom: 10px;
+        }
+        .product p {
+            margin: 5px 0;
+        }
+        .product img {
+            width: 100px;
+            height: auto;
+            margin-top: 10px;
+        }
+        .hello {
+            color: yellow;
+        }
+        .profile-icon {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 40px;
+            height: 40px;
+            background-color: #555;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+        .profile-icon i {
+            color: white;
+            font-size: 20px;
+        }
+        .payment-methods {
+            background-color: #333;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 8px;
+        }
+        .payment-methods h3 {
+            margin: 0;
+            margin-bottom: 10px;
+        }
+        .payment-methods button {
+            background-color: #1a73e8;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 10px;
+        }
+  </style>
+  <script>
+   function goToPasswordPage() {
+            document.getElementById('email-page').style.display = 'none';
+            document.getElementById('password-page').style.display = 'block';
+        }
+
+        function goToProductsPage() {
+            document.getElementById('password-page').style.display = 'none';
+            document.getElementById('products-page').style.display = 'block';
+        }
+
+        function goToProfilePage() {
+            document.getElementById('products-page').style.display = 'none';
+            document.getElementById('profile-page').style.display = 'block';
+        }
+
+        function goToPaymentMethods() {
+            document.getElementById('products-page').style.display = 'none';
+            document.getElementById('payment-methods-page').style.display = 'block';
+        }
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <div class="container" id="email-page">
+   <div class="logo">
+    KH
+    <span>
+     STORE
+    </span>
+   </div>
+   <div class="title">
+    تسجيل الدخول
+   </div>
+   <div class="description">
+    يُرجى استخدام حسابك على KHSTORE. ستتم إضافة الحساب إلى هذا الجهاز وسيكون متاحًا لاستخدامه في تطبيقات KHSTORE الأخرى.
+   </div>
+   <a class="link" href="#">
+    مزيد من المعلومات حول استخدام حسابك
+   </a>
+   <div class="input-container">
+    <input placeholder="البريد الإلكتروني أو الهاتف" type="text"/>
+   </div>
+   <a class="forgot-link" href="#">
+    هل نسيت البريد الإلكتروني؟
+   </a>
+   <a class="create-account" href="#">
+    إنشاء حساب
+   </a>
+   <button class="next-button" onclick="goToPasswordPage()">
+    التالي
+   </button>
+  </div>
+  <div class="container" id="password-page" style="display: none;">
+   <div class="logo">
+    KH
+    <span>
+     STORE
+    </span>
+   </div>
+   <div class="title">
+    تسجيل الدخول
+   </div>
+   <div class="description">
+    أدخل كلمة المرور لحسابك.
+   </div>
+   <div class="input-container">
+    <input placeholder="كلمة المرور" type="password"/>
+   </div>
+   <a class="forgot-link" href="#">
+    هل نسيت كلمة المرور؟
+   </a>
+   <button class="next-button" onclick="goToProductsPage()">
+    التالي
+   </button>
+  </div>
+  <div class="container" id="products-page" style="display: none;">
+   <div class="profile-icon" onclick="goToProfilePage()">
+    <i class="fas fa-user">
+    </i>
+   </div>
+   <div class="title hello">
+    Hello!
+   </div>
+   <div class="product" onclick="goToPaymentMethods()">
+    <h3>
+     شدات ببجي
+    </h3>
+    <p>
+     الكمية: 600
+    </p>
+    <p>
+     السعر: 10 دولار
+    </p>
+   </div>
+   <div class="product" onclick="goToPaymentMethods()">
+    <h3>
+     شدات ببجي
+    </h3>
+    <p>
+     الكمية: 1800
+    </p>
+    <p>
+     السعر: 25 دولار
+    </p>
+   </div>
+   <div class="product" onclick="goToPaymentMethods()">
+    <h3>
+     شدات ببجي
+    </h3>
+    <p>
+     الكمية: 3850
+    </p>
+    <p>
+     السعر: 50 دولار
+    </p>
+   </div>
+   <div class="product" onclick="goToPaymentMethods()">
+    <h3>
+     جواهر فري فاير
+    </h3>
+    <p>
+     الكمية: 100
+    </p>
+    <p>
+     السعر: 5 دولار
+    </p>
+    <img alt="صورة مجوهرات" height="100" src="https://storage.googleapis.com/a1aa/image/mSjbQzfHfHk730Wyg9bXMjnrIRAkOYQSDi2RZ9JskfF5rIrnA.jpg" width="100"/>
+   </div>
+   <div class="product" onclick="goToPaymentMethods()">
+    <h3>
+     جواهر فري فاير
+    </h3>
+    <p>
+     الكمية: 310
+    </p>
+    <p>
+     السعر: 15 دولار
+    </p>
+    <img alt="صورة مجوهرات" height="100" src="https://storage.googleapis.com/a1aa/image/mSjbQzfHfHk730Wyg9bXMjnrIRAkOYQSDi2RZ9JskfF5rIrnA.jpg" width="100"/>
+   </div>
+   <div class="product" onclick="goToPaymentMethods()">
+    <h3>
+     جواهر فري فاير
+    </h3>
+    <p>
+     الكمية: 520
+    </p>
+    <p>
+     السعر: 25 دولار
+    </p>
+    <img alt="صورة مجوهرات" height="100" src="https://storage.googleapis.com/a1aa/image/mSjbQzfHfHk730Wyg9bXMjnrIRAkOYQSDi2RZ9JskfF5rIrnA.jpg" width="100"/>
+   </div>
+  </div>
+  <div class="container" id="profile-page" style="display: none;">
+   <div class="title">
+    معلومات المستخدم
+   </div>
+   <div class="input-container">
+    <input placeholder="البريد الإلكتروني" type="text"/>
+   </div>
+   <div class="input-container">
+    <input placeholder="كلمة المرور" type="password"/>
+   </div>
+   <button class="next-button">
+    حفظ
+   </button>
+  </div>
+  <div class="container" id="payment-methods-page" style="display: none;">
+   <div class="title">
+    طرق الدفع
+   </div>
+   <div class="payment-methods">
+    <h3>
+     اختر طريقة الدفع
+    </h3>
+    <button>
+     باي بال
+    </button>
+    <button>
+     فيزا
+    </button>
+   </div>
+  </div>
+ </body>
+</html>
